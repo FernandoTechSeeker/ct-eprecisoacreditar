@@ -1,789 +1,546 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CT É Preciso Acreditar | Tratamento de Dependência Química em Goiana-PE</title>
-<meta name="description" content="Comunidade Terapêutica em Goiana-PE especializada no tratamento de dependência química. Atendimento humanizado, equipe multidisciplinar e 30 leitos. Ligue agora.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --verde: #1b4d3e;
-    --verde-medio: #2d6a55;
-    --verde-claro: #e8f4ef;
-    --ouro: #b8860b;
-    --ouro-claro: #f5ecd4;
-    --branco: #faf9f6;
-    --cinza: #5a5a5a;
-    --cinza-leve: #f2f0eb;
-    --texto: #1a1a1a;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--branco);
-    color: var(--texto);
-    font-size: 16px;
-    line-height: 1.7;
-  }
-  h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    line-height: 1.2;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CT É Preciso Acreditar | Comunidade Terapêutica em Goiana-PE</title>
+  <meta name="description" content="Comunidade Terapêutica É Preciso Acreditar em Goiana-PE. Atendimento humanizado, equipe de apoio, estrutura organizada e orientação inicial pelo WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --verde: #1b4d3e;
+      --verde-2: #2d6a55;
+      --verde-claro: #e8f4ef;
+      --ouro: #b8860b;
+      --fundo: #faf9f6;
+      --card: #ffffff;
+      --texto: #1f2933;
+      --muted: #65727f;
+      --borda: #e6e0d6;
+      --sombra: 0 14px 35px rgba(16, 42, 34, 0.10);
+      --radius: 16px;
+    }
 
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    background: rgba(250,249,246,0.96);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid #e0dbd0;
-    z-index: 100;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--verde);
-    text-decoration: none;
-    letter-spacing: 0.01em;
-  }
-  .nav-logo span { color: var(--ouro); }
-  .nav-links { display: flex; gap: 28px; list-style: none; }
-  .nav-links a {
-    font-size: 14px;
-    color: var(--cinza);
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--verde); }
-  .nav-cta {
-    background: var(--verde);
-    color: white !important;
-    padding: 9px 20px;
-    border-radius: 6px;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-  }
-  .nav-cta:hover { background: var(--verde-medio) !important; color: white !important; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', Arial, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      line-height: 1.1;
+      color: var(--verde);
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    background: linear-gradient(160deg, var(--verde) 0%, #0f3328 100%);
-    display: flex;
-    align-items: center;
-    padding: 100px 5% 60px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -40px; right: -80px;
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(184,134,11,0.12) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .hero-content { max-width: 700px; position: relative; z-index: 1; }
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.85);
-    font-size: 13px;
-    padding: 6px 14px;
-    border-radius: 100px;
-    margin-bottom: 28px;
-    letter-spacing: 0.03em;
-  }
-  .hero-badge::before {
-    content: '';
-    width: 7px; height: 7px;
-    background: #4ade80;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .hero h1 {
-    font-size: clamp(38px, 5vw, 60px);
-    color: white;
-    margin-bottom: 22px;
-    font-weight: 500;
-  }
-  .hero h1 em {
-    font-style: normal;
-    color: #d4a843;
-  }
-  .hero p {
-    font-size: 18px;
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 36px;
-    max-width: 540px;
-    font-weight: 300;
-  }
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #25D366;
-    color: white;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: transform 0.2s, background 0.2s;
-  }
-  .btn-primary:hover { background: #1ebe5a; transform: translateY(-1px); }
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid rgba(255,255,255,0.35);
-    color: white;
-    padding: 14px 26px;
-    border-radius: 8px;
-    font-size: 15px;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .btn-secondary:hover { background: rgba(255,255,255,0.1); }
-  .hero-nums {
-    display: flex;
-    gap: 36px;
-    margin-top: 56px;
-    padding-top: 40px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    flex-wrap: wrap;
-  }
-  .hero-num-item { }
-  .hero-num-item strong {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 38px;
-    font-weight: 600;
-    color: #d4a843;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .hero-num-item span {
-    font-size: 13px;
-    color: rgba(255,255,255,0.6);
-    letter-spacing: 0.02em;
-  }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250, 249, 246, 0.96);
+      border-bottom: 1px solid var(--borda);
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--verde);
+      white-space: nowrap;
+    }
+    .brand span { color: var(--ouro); }
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .links a { text-decoration: none; }
+    .links a:hover { color: var(--verde); }
 
-  /* DISCLAIMER */
-  .disclaimer {
-    background: #fff8e1;
-    border-left: 3px solid var(--ouro);
-    padding: 12px 20px;
-    font-size: 13px;
-    color: #5a4a00;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .disclaimer strong { font-weight: 500; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+      transition: transform .2s ease, opacity .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-whats { background: #25D366; color: #fff; }
+    .btn-outline { border: 1px solid rgba(255,255,255,.36); color: #fff; background: transparent; }
+    .btn-dark { background: var(--verde); color: #fff; }
 
-  /* SECTIONS */
-  section { padding: 80px 5%; }
-  .section-label {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ouro);
-    margin-bottom: 12px;
-  }
-  .section-title {
-    font-size: clamp(28px, 3.5vw, 44px);
-    color: var(--verde);
-    margin-bottom: 18px;
-  }
-  .section-sub {
-    font-size: 17px;
-    color: var(--cinza);
-    max-width: 580px;
-    margin-bottom: 52px;
-    font-weight: 300;
-  }
+    .hero {
+      background: radial-gradient(circle at 85% 20%, rgba(184,134,11,.22), transparent 30%), linear-gradient(150deg, #1b4d3e, #0f3328);
+      color: #fff;
+      padding: 96px 0 72px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+      gap: 48px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      font-size: 13px;
+      color: rgba(255,255,255,.85);
+      margin-bottom: 24px;
+    }
+    .badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+    }
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(42px, 6vw, 72px);
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: #d4a843; font-style: normal; }
+    .hero p {
+      max-width: 640px;
+      color: rgba(255,255,255,.78);
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 40px; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 680px;
+    }
+    .stat {
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.07);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .stat strong {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: #d4a843;
+      font-size: 36px;
+      line-height: 1;
+    }
+    .stat span { color: rgba(255,255,255,.66); font-size: 13px; }
+    .hero-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    }
+    .hero-card h3 { color: #fff; font-size: 28px; margin-bottom: 14px; }
+    .hero-card p { font-size: 15px; margin-bottom: 18px; }
+    .hero-card ul { list-style: none; display: grid; gap: 10px; color: rgba(255,255,255,.8); font-size: 14px; }
+    .hero-card li::before { content: '✓'; color: #4ade80; margin-right: 8px; }
 
-  /* SOBRE */
-  .sobre { background: var(--branco); }
-  .sobre-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-  .sobre-img {
-    background: var(--verde-claro);
-    border-radius: 12px;
-    aspect-ratio: 4/3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .sobre-img-placeholder {
-    text-align: center;
-    color: var(--verde-medio);
-    font-size: 14px;
-    padding: 20px;
-  }
-  .sobre-img-placeholder svg { margin-bottom: 12px; opacity: 0.5; }
-  .sobre-text p {
-    color: var(--cinza);
-    margin-bottom: 18px;
-    font-size: 16px;
-    line-height: 1.8;
-  }
-  .sobre-destaque {
-    background: var(--verde-claro);
-    border-left: 3px solid var(--verde);
-    padding: 18px 22px;
-    border-radius: 0 8px 8px 0;
-    margin: 28px 0;
-    font-size: 15px;
-    color: var(--verde);
-    font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-  }
+    section { padding: 76px 0; }
+    .section-label {
+      color: var(--ouro);
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .section-title { font-size: clamp(34px, 4vw, 52px); margin-bottom: 18px; }
+    .section-sub { color: var(--muted); max-width: 720px; margin-bottom: 42px; font-size: 17px; }
 
-  /* EQUIPE */
-  .equipe { background: var(--cinza-leve); }
-  .equipe-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  .equipe-card {
-    background: white;
-    border-radius: 10px;
-    padding: 28px 22px;
-    border: 1px solid #e8e4dc;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .equipe-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(27,77,62,0.1); }
-  .equipe-icon {
-    width: 46px; height: 46px;
-    background: var(--verde-claro);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-  }
-  .equipe-icon svg { width: 24px; height: 24px; color: var(--verde); }
-  .equipe-card h3 {
-    font-size: 16px;
-    color: var(--verde);
-    margin-bottom: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-  }
-  .equipe-card p { font-size: 14px; color: var(--cinza); line-height: 1.6; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .image-box {
+      min-height: 360px;
+      background: linear-gradient(140deg, var(--verde-claro), #fff);
+      border: 1px solid var(--borda);
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      color: var(--verde-2);
+      text-align: center;
+      padding: 28px;
+      box-shadow: var(--sombra);
+    }
+    .image-box strong { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 32px; color: var(--verde); }
+    .about-text p { color: var(--muted); margin-bottom: 16px; }
+    .quote {
+      border-left: 4px solid var(--ouro);
+      background: var(--verde-claro);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      color: var(--verde);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      margin: 24px 0;
+    }
 
-  /* COMO FUNCIONA */
-  .como { background: var(--branco); }
-  .como-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0;
-    position: relative;
-  }
-  .step {
-    padding: 32px 28px;
-    position: relative;
-  }
-  .step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 44px;
-    right: 0;
-    width: 1px;
-    height: 40px;
-    background: var(--verde-claro);
-  }
-  .step-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 52px;
-    font-weight: 600;
-    color: var(--verde-claro);
-    line-height: 1;
-    margin-bottom: 12px;
-  }
-  .step h3 {
-    font-size: 17px;
-    color: var(--verde);
-    margin-bottom: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-  }
-  .step p { font-size: 14px; color: var(--cinza); line-height: 1.7; }
+    .team { background: #f2f0eb; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--borda);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 10px 28px rgba(16,42,34,.07);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--sombra); }
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--verde-claro);
+      color: var(--verde);
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+    .card h3 { font-family: 'DM Sans', Arial, sans-serif; font-size: 18px; margin-bottom: 9px; }
+    .card p { color: var(--muted); font-size: 14px; }
 
-  /* ESTRUTURA */
-  .estrutura { background: var(--verde); }
-  .estrutura .section-label { color: #d4a843; }
-  .estrutura .section-title { color: white; }
-  .estrutura .section-sub { color: rgba(255,255,255,0.65); }
-  .estrutura-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 16px;
-  }
-  .estrutura-item {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 10px;
-    padding: 24px 20px;
-    text-align: center;
-  }
-  .estrutura-item strong {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 40px;
-    color: #d4a843;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .estrutura-item span { font-size: 14px; color: rgba(255,255,255,0.7); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .step {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .step-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--ouro);
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+    .step h3 { font-family: 'DM Sans', Arial, sans-serif; font-size: 16px; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 14px; }
 
-  /* CONTATO */
-  .contato { background: var(--cinza-leve); }
-  .contato-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-  }
-  .contato-info p {
-    color: var(--cinza);
-    margin-bottom: 14px;
-    font-size: 15px;
-  }
-  .contato-info strong { color: var(--verde); }
-  .contato-detail {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-  .contato-detail-icon {
-    width: 36px; height: 36px;
-    background: var(--verde-claro);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .contato-detail-icon svg { width: 18px; height: 18px; color: var(--verde); }
-  .contato-detail-text { font-size: 14px; color: var(--cinza); line-height: 1.6; }
-  .contato-detail-text strong { display: block; font-size: 13px; color: var(--verde); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px; font-weight: 500; }
-  .contato-cta {
-    background: white;
-    border-radius: 12px;
-    padding: 36px 32px;
-    border: 1px solid #e8e4dc;
-  }
-  .contato-cta h3 {
-    font-size: 22px;
-    color: var(--verde);
-    margin-bottom: 12px;
-  }
-  .contato-cta p { font-size: 15px; color: var(--cinza); margin-bottom: 28px; font-weight: 300; }
-  .btn-wpp {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #25D366;
-    color: white;
-    padding: 16px 24px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    width: 100%;
-    justify-content: center;
-    transition: background 0.2s;
-    margin-bottom: 14px;
-  }
-  .btn-wpp:hover { background: #1ebe5a; }
-  .btn-tel {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: white;
-    color: var(--verde);
-    padding: 14px 24px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    width: 100%;
-    justify-content: center;
-    border: 1.5px solid var(--verde);
-    transition: background 0.2s;
-  }
-  .btn-tel:hover { background: var(--verde-claro); }
-  .atendimento-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--cinza);
-    justify-content: center;
-    margin-top: 16px;
-  }
-  .atendimento-badge::before {
-    content: '';
-    width: 8px; height: 8px;
-    background: #4ade80;
-    border-radius: 50%;
-  }
+    .structure {
+      background: linear-gradient(150deg, var(--verde), #102a22);
+      color: #fff;
+    }
+    .structure h2 { color: #fff; }
+    .structure .section-sub { color: rgba(255,255,255,.7); }
+    .structure-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .structure-item {
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.07);
+      border-radius: var(--radius);
+      padding: 26px;
+      text-align: center;
+    }
+    .structure-item strong {
+      display: block;
+      color: #d4a843;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 44px;
+      line-height: 1;
+    }
+    .structure-item span { color: rgba(255,255,255,.72); font-size: 14px; }
 
-  /* FOOTER */
-  footer {
-    background: #0f2a22;
-    color: rgba(255,255,255,0.5);
-    padding: 36px 5%;
-    font-size: 13px;
-    line-height: 1.8;
-  }
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .footer-col h4 {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: rgba(255,255,255,0.3);
-    margin-bottom: 12px;
-  }
-  .footer-col p, .footer-col a {
-    color: rgba(255,255,255,0.55);
-    display: block;
-    text-decoration: none;
-    margin-bottom: 4px;
-  }
-  .footer-col a:hover { color: rgba(255,255,255,0.8); }
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-  }
-  .footer-bottom a {
-    color: rgba(255,255,255,0.4);
-    text-decoration: underline;
-  }
-  .footer-disclaimer {
-    background: rgba(255,255,255,0.04);
-    border-radius: 6px;
-    padding: 12px 16px;
-    font-size: 11.5px;
-    color: rgba(255,255,255,0.3);
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
+    .contact { background: #f2f0eb; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 38px;
+      align-items: start;
+    }
+    .contact-list { display: grid; gap: 16px; }
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .contact-item strong { display: block; color: var(--verde); margin-bottom: 3px; }
+    .contact-item span { color: var(--muted); font-size: 14px; }
+    .cta-box {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: var(--sombra);
+    }
+    .cta-box h3 { font-size: 32px; margin-bottom: 12px; }
+    .cta-box p { color: var(--muted); margin-bottom: 22px; }
+    .small-note { color: var(--muted); font-size: 13px; text-align: center; margin-top: 12px; }
 
-  /* FLOAT WPP */
-  .float-wpp {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 58px;
-    height: 58px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    z-index: 200;
-    text-decoration: none;
-    transition: transform 0.2s;
-  }
-  .float-wpp:hover { transform: scale(1.08); }
-  .float-wpp svg { width: 30px; height: 30px; fill: white; }
+    footer {
+      background: #0f2a22;
+      color: rgba(255,255,255,.62);
+      padding: 34px 0;
+      font-size: 13px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; gap: 24px; margin-bottom: 24px; }
+    footer h4 { color: rgba(255,255,255,.82); margin-bottom: 10px; }
+    footer a { color: rgba(255,255,255,.7); text-decoration: none; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 18px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
-  /* MOBILE */
-  @media (max-width: 768px) {
-    nav { padding: 0 4%; }
-    .nav-links { display: none; }
-    section { padding: 60px 5%; }
-    .sobre-grid, .contato-wrap, .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-    .hero { padding: 90px 5% 50px; }
-    .hero-nums { gap: 24px; }
-    .step:not(:last-child)::after { display: none; }
-  }
-</style>
+    .float-wpp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 50;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      font-size: 30px;
+      box-shadow: 0 10px 28px rgba(37,211,102,.35);
+    }
+
+    @media (max-width: 900px) {
+      .links { display: none; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .steps, .structure-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .nav { height: 64px; }
+      .brand { font-size: 20px; }
+      .hero { padding: 72px 0 56px; }
+      .stats, .grid, .steps, .structure-grid, .footer-grid { grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      section { padding: 58px 0; }
+    }
+  </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio">É Preciso <span>Acreditar</span></a>
+      <ul class="links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#estrutura">Estrutura</a></li>
+        <li><a class="nav-cta" href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">Falar agora</a></li>
+      </ul>
+    </div>
+  </header>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">É Preciso <span>Acreditar</span></a>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#equipe">Equipe</a></li>
-    <li><a href="#como-funciona">Como funciona</a></li>
-    <li><a href="#contato" class="nav-cta">Falar agora</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="inicio">
-  <div class="hero-content">
-    <div class="hero-badge">Atendimento 24h disponível</div>
-    <h1>Tratamento com cuidado,<br><em>recuperação com propósito</em></h1>
-    <p>Comunidade Terapêutica especializada no tratamento de dependência química. Atendimento humanizado para quem precisa recomeçar — e para as famílias que caminham junto.</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/5581893599493?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20tratamento" class="btn-primary" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Falar pelo WhatsApp
-      </a>
-      <a href="tel:+558189359493" class="btn-secondary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
-        (81) 8935-9493
-      </a>
-    </div>
-    <div class="hero-nums">
-      <div class="hero-num-item"><strong>30</strong><span>Leitos disponíveis</span></div>
-      <div class="hero-num-item"><strong>24h</strong><span>Atendimento contínuo</span></div>
-      <div class="hero-num-item"><strong>PE</strong><span>Goiana, Pernambuco</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- DISCLAIMER -->
-<div class="disclaimer">
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#b8860b" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-  <span>Em situação de emergência médica, ligue imediatamente para o <strong>SAMU 192</strong> ou <strong>Bombeiros 193</strong>. Este serviço não substitui atendimento de urgência.</span>
-</div>
-
-<!-- SOBRE -->
-<section class="sobre" id="sobre">
-  <div class="sobre-grid">
-    <div class="sobre-img">
-      <div class="sobre-img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="#2d6a55" stroke-width="1.2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22" stroke="#2d6a55" stroke-width="1.2"/></svg>
-        <p>Insira foto da estrutura aqui</p>
-      </div>
-    </div>
-    <div class="sobre-text">
-      <p class="section-label">Quem somos</p>
-      <h2 class="section-title">Uma comunidade que acredita na recuperação</h2>
-      <p>A CT É Preciso Acreditar é uma Comunidade Terapêutica registrada, localizada em Goiana-PE, voltada ao tratamento de pessoas com dependência química e transtornos relacionados.</p>
-      <p>Oferecemos um ambiente estruturado, seguro e acolhedor, com capacidade para 30 leitos e equipe multidisciplinar disponível 24 horas por dia.</p>
-      <div class="sobre-destaque">
-        "Acreditar na recuperação não é ingenuidade — é o ponto de partida de tudo."
-      </div>
-      <p>Atendemos homens e mulheres em regime de internação, com acompanhamento clínico, psicológico e terapêutico ao longo de todo o processo de tratamento.</p>
-    </div>
-  </div>
-</section>
-
-<!-- EQUIPE -->
-<section class="equipe" id="equipe">
-  <p class="section-label">Nossa equipe</p>
-  <h2 class="section-title">Profissionais dedicados ao cuidado</h2>
-  <p class="section-sub">Equipe multidisciplinar com atuação integrada para um tratamento completo e humanizado.</p>
-  <div class="equipe-grid">
-    <div class="equipe-card">
-      <div class="equipe-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-      </div>
-      <h3>Médico Psiquiatra</h3>
-      <p>Avaliação especializada, acompanhamento clínico e orientação de tratamento para questões de saúde mental.</p>
-    </div>
-    <div class="equipe-card">
-      <div class="equipe-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-      </div>
-      <h3>Psicólogo</h3>
-      <p>Acompanhamento emocional, terapia individual e suporte ao desenvolvimento pessoal durante o tratamento.</p>
-    </div>
-    <div class="equipe-card">
-      <div class="equipe-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
-      </div>
-      <h3>Terapeuta</h3>
-      <p>Suporte ao desenvolvimento de habilidades, organização da rotina e atividades terapêuticas em grupo.</p>
-    </div>
-    <div class="equipe-card">
-      <div class="equipe-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-      </div>
-      <h3>Enfermeiros</h3>
-      <p>Cuidado diário, acompanhamento de saúde física e suporte clínico com dedicação e profissionalismo.</p>
-    </div>
-    <div class="equipe-card">
-      <div class="equipe-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-      </div>
-      <h3>Monitores 24h</h3>
-      <p>Presença contínua garantindo um ambiente seguro, organizado e acolhedor em toda a rotina.</p>
-    </div>
-    <div class="equipe-card">
-      <div class="equipe-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
-      </div>
-      <h3>Apoio Veicular</h3>
-      <p>Transporte seguro para admissão e deslocamentos necessários durante o período de tratamento.</p>
-    </div>
-  </div>
-</section>
-
-<!-- COMO FUNCIONA -->
-<section class="como" id="como-funciona">
-  <p class="section-label">O processo</p>
-  <h2 class="section-title">Como funciona o atendimento</h2>
-  <p class="section-sub">Do primeiro contato à internação, cada etapa é conduzida com cuidado e clareza.</p>
-  <div class="como-steps">
-    <div class="step">
-      <div class="step-num">01</div>
-      <h3>Primeiro contato</h3>
-      <p>A família ou o próprio paciente entra em contato pelo WhatsApp ou telefone. Escutamos com atenção e sem julgamento.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">02</div>
-      <h3>Avaliação inicial</h3>
-      <p>Entendemos a situação, o histórico e as necessidades para orientar o melhor caminho de tratamento disponível.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">03</div>
-      <h3>Organização da internação</h3>
-      <p>Explicamos documentos necessários, valores, formas de pagamento e todas as informações antes de qualquer decisão.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">04</div>
-      <h3>Admissão e acolhimento</h3>
-      <p>O paciente é recebido pela equipe de forma humanizada. A família é orientada sobre a rotina, visitas e comunicação.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">05</div>
-      <h3>Acompanhamento contínuo</h3>
-      <p>Durante todo o tratamento, a equipe acompanha a evolução do paciente e mantém contato com a família.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ESTRUTURA -->
-<section class="estrutura" id="estrutura">
-  <p class="section-label">Nossa estrutura</p>
-  <h2 class="section-title">Ambiente preparado para o cuidado</h2>
-  <p class="section-sub">Estrutura física adequada, localização tranquila e ambiente projetado para favorecer a recuperação.</p>
-  <div class="estrutura-grid">
-    <div class="estrutura-item"><strong>30</strong><span>Leitos disponíveis</span></div>
-    <div class="estrutura-item"><strong>24h</strong><span>Monitoramento contínuo</span></div>
-    <div class="estrutura-item"><strong>100%</strong><span>Equipe especializada</span></div>
-    <div class="estrutura-item"><strong>PE</strong><span>Goiana, Pernambuco</span></div>
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section class="contato" id="contato">
-  <div class="contato-wrap">
-    <div class="contato-info">
-      <p class="section-label">Fale conosco</p>
-      <h2 class="section-title">Estamos aqui para ajudar</h2>
-      <p style="font-weight:300; font-size:17px; color:var(--cinza); margin-bottom:36px;">O primeiro passo pode ser uma mensagem. Nossa equipe responde com atenção, discrição e respeito pela sua família.</p>
-      <div class="contato-detail">
-        <div class="contato-detail-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">Atendimento inicial pelo WhatsApp</div>
+          <h1>Cuidado, acolhimento e <em>recomeço com propósito</em></h1>
+          <p>Comunidade Terapêutica em Goiana-PE, com estrutura organizada, equipe de apoio e atendimento humanizado para famílias que precisam de orientação.</p>
+          <div class="hero-actions">
+            <a class="btn btn-whats" href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20informa%C3%A7%C3%B5es%20sobre%20a%20comunidade." target="_blank" rel="noopener noreferrer">WhatsApp: (81) 97306-9389</a>
+            <a class="btn btn-outline" href="tel:+5581973069389">Ligar: (81) 97306-9389</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>30</strong><span>leitos de capacidade operacional</span></div>
+            <div class="stat"><strong>24h</strong><span>rotina acompanhada</span></div>
+            <div class="stat"><strong>PE</strong><span>Goiana, Pernambuco</span></div>
+          </div>
         </div>
-        <div class="contato-detail-text">
-          <strong>Endereço</strong>
-          Lot. Catamarã III, Quadra F, Lote 03, KM 50 Rural<br>Carne de Vaca, Goiana — PE, CEP 55.900-000
+
+        <aside class="hero-card">
+          <h3>Orientação inicial</h3>
+          <p>Converse com nossa equipe para entender informações importantes antes de qualquer decisão.</p>
+          <ul>
+            <li>Atendimento humanizado</li>
+            <li>Informações sobre rotina e estrutura</li>
+            <li>Orientação para familiares</li>
+            <li>Contato direto pelo WhatsApp correto</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about-grid">
+        <div class="image-box">
+          <div>
+            <strong>É Preciso Acreditar</strong>
+            <p>Espaço para imagem da estrutura ou da identidade visual da comunidade.</p>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-label">Quem somos</p>
+          <h2 class="section-title">Uma comunidade organizada para acolher</h2>
+          <p>A Comunidade Terapêutica É Preciso Acreditar Ltda está localizada em Goiana-PE e atua com foco em acolhimento, rotina estruturada e acompanhamento humanizado.</p>
+          <p>Nosso objetivo é oferecer um ambiente organizado, com equipe de apoio e comunicação clara com familiares.</p>
+          <div class="quote">“Acreditar no recomeço é o primeiro passo para construir uma nova direção.”</div>
+          <p>O primeiro contato é feito pelo WhatsApp institucional, onde a família pode receber informações iniciais sobre funcionamento, rotina, documentação e próximos passos.</p>
         </div>
       </div>
-      <div class="contato-detail">
-        <div class="contato-detail-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
-        </div>
-        <div class="contato-detail-text">
-          <strong>Telefone</strong>
-          (81) 97306-9389 — disponível 24 horas
+    </section>
+
+    <section class="team" id="equipe">
+      <div class="container">
+        <p class="section-label">Equipe</p>
+        <h2 class="section-title">Profissionais e suporte na rotina</h2>
+        <p class="section-sub">A família pode receber informações sobre a atuação dos profissionais e da equipe de apoio envolvida na rotina da comunidade.</p>
+
+        <div class="grid">
+          <article class="card">
+            <div class="icon">🩺</div>
+            <h3>Médico psiquiatra</h3>
+            <p>Avaliação especializada e orientação clínica quando necessário, respeitando os limites de cada situação.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💬</div>
+            <h3>Psicólogo</h3>
+            <p>Escuta, orientação emocional e apoio no desenvolvimento pessoal e familiar.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🤝</div>
+            <h3>Terapeuta</h3>
+            <p>Apoio em atividades de rotina, desenvolvimento de habilidades e fortalecimento de vínculos.</p>
+          </article>
+          <article class="card">
+            <div class="icon">➕</div>
+            <h3>Enfermeiros</h3>
+            <p>Suporte à rotina de cuidado, organização básica e acompanhamento de demandas de saúde.</p>
+          </article>
+          <article class="card">
+            <div class="icon">👥</div>
+            <h3>Monitores</h3>
+            <p>Equipe presente no dia a dia, ajudando na organização das atividades e no acompanhamento da rotina.</p>
+          </article>
+          <article class="card">
+            <div class="icon">📞</div>
+            <h3>Atendimento familiar</h3>
+            <p>Canal de contato para esclarecer dúvidas e orientar familiares de forma simples e responsável.</p>
+          </article>
         </div>
       </div>
-      <div class="contato-detail">
-        <div class="contato-detail-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <div class="contato-detail-text">
-          <strong>Email</strong>
-          eprecisoacreditar2026@gmail.com
+    </section>
+
+    <section id="como-funciona">
+      <div class="container">
+        <p class="section-label">Processo</p>
+        <h2 class="section-title">Como funciona o atendimento</h2>
+        <p class="section-sub">Do primeiro contato até a organização das informações, cada etapa é conduzida com clareza.</p>
+        <div class="steps">
+          <article class="step"><div class="step-num">01</div><h3>Contato inicial</h3><p>A família chama pelo WhatsApp institucional e informa sua principal dúvida.</p></article>
+          <article class="step"><div class="step-num">02</div><h3>Escuta objetiva</h3><p>Entendemos a situação com respeito, sem exposição e com linguagem simples.</p></article>
+          <article class="step"><div class="step-num">03</div><h3>Informações</h3><p>Explicamos rotina, equipe, estrutura, documentação, responsabilidades e valores.</p></article>
+          <article class="step"><div class="step-num">04</div><h3>Organização</h3><p>A família recebe orientação para avaliar os próximos passos com mais segurança.</p></article>
+          <article class="step"><div class="step-num">05</div><h3>Acompanhamento</h3><p>Quando houver avanço, a equipe orienta sobre horários, regras e comunicação familiar.</p></article>
         </div>
       </div>
-    </div>
-    <div class="contato-cta">
-      <h3>Receber orientação agora</h3>
-      <p>Nossa equipe está disponível para esclarecer dúvidas, orientar sobre o processo de internação e apoiar a família neste momento.</p>
-      <a href="https://wa.me/5581973069389?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20tratamento" class="btn-wpp" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52 -.075 -.149 -.669 -1.612 -.916 -2.207 -.242 -.579 -.487 -.5 -.669 -.51 -.173 -.008 -.371 -.01 -.57 -.01 -.198 0 -.52 .074 -.792 .372 -.272 .２９７ -１．０４ １．０１６ -１．０４ ２．４７９ ０ １．４６２ １．０６５ ２．８７５ １．２１３ ３．０７４ .１４９ .１９８ ２．０９６ ３．２ ５．０７７ ４．４８７ .７０９ .３０６ １．２６２ .４８９ １．６９４ .６２５ .７１２ .２２７ １．３６ .１９５ １．８７１ .１１８ .５７１ -.０８５ １．７５８ -.７１９ ２．００６ -₁.₄₁₃ .₂₄₈ -₀.₆₉₄ .₂₄₈ -₁.₂₈₉ .₁₇₃ -₁.₄₁₃ -₀.₀₇₄ -₀.₁₂₄ -₀.₂₇₂ -₀.₁₉₈ -₀.៥₇ -₀.³⁴⁷ m -⁵,⁴²¹ ⁷,⁴⁰³ h -⁰,⁰⁰⁴ a ⁹,⁸⁷ ⁹,⁸⁷ ₀ ₀¹ -⁵,⁰³¹ -¹,³⁷⁸ l -⁰,³⁶¹ -⁰,²¹⁴ -³,⁷⁴¹ ,९८२ ,९९८ -³,६४८ -,२३५ -,३७٤ a ٩,٨٦ ٩,٨٦ ₀ ₀¹ -١,٥١ -٥,٢٦ c ,₀₀١ -,۵۴۵ ,۴۳۶ -,۹۸۸۴ ,۹۸۸۸ -,۹۸۸۴ ,²,၆၄ ,₀ ,၅,၁၂² ,¹,၀³ ,၆,၉၈৮ a ,²,৮৯৩ ,৬ ি ি ি ি ি ি ি ি ি ি ি ি ি ি ি ি ি ি ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ઼ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕ ಕಳಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾಯಾದ್ಯಾයನವನವನವನವನವನವನವನವನವನವನವನವನವನವನವನವनवনവనവনவनവनवनവনवनవনవنवনവনவنवనవనவनവనவنवनవนวనวনวนวనวনวنვنვنვنვنવنવนვنვนવнવнવนວນວນວນວນວນວນວນວນວນວນວနနနနနနနနননនনនনននনননนนนนннннннннננננננננננננنننننننن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن ن נ נ נ נ נ נ נ נ נ נ נ נ נ נ ن Н Н Н Н Н Н Н Н Н Н Н Н Н Н N N N N N N N N N N N N N N N N N N N n n n n n n n n n n n n n n n n n n n n n n n n n n O O O O O O O O O O O O O O O O O O O o o o o o o o o o o o o o o o o o o o o P P P P P P P P P P P P P P P P P P P p p p p p p p p p p p p p p p p p p p p Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q Q q q q q q q q q q q q q q q q q q q q q R R R R R R R R R R R R R R R R R R R r r r r r r r r r r r r r r r r r r r s s s s s s s s s s s s s s s s s s S S S S S S S S S S S S S S S S S S T T T T T T T T T T T T T T T T t t t t t t t t t t t t t t t t u u u u u u u u u u u u u u u u U U U U U U U U U U U U U U U U v v v v v v v v v v v v v v v v V V V V V V V V V V V V V V V W W W W W W W W W W W W W W W W w w w w w w w w w w w w w w w w X X X X X X X X X X X X X X X X x x x x x x x x x x x x x x x x Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y Y y y y y y y y y y y y y y y y y Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z z z z z z z z z z z z z z z z z
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <h4>CT É Preciso Acreditar</h4>
-      <p>Comunidade Terapêutica especializada no tratamento de dependência química em Goiana, Pernambuco.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Informações legais</h4>
-      <p><strong style="color:rgba(255,255,255,0.45)">Razão Social:</strong> CT E Preciso Acreditar Ltda</p>
-      <p><strong style="color:rgba(255,255,255,0.45)">CNPJ:</strong> 66.082.568/0001-07</p>
-      <p><strong style="color:rgba(255,255,255,0.45)">CNAE:</strong> 87.20-4-99</p>
-      <p><strong style="color:rgba(255,255,255,0.45)">Sit. Cadastral:</strong> Ativa</p>
-    </div>
-    <div class="footer-col">
-      <h4>Contato</h4>
-      <p>Lot. Catamarã III, Qd F, Lt 03<br>KM 50 Rural, Carne de Vaca<br>Goiana — PE | CEP 55.900-000</p>
-      <a href="tel:+558197306-9389">(81) 97306-9389</a>
-      <a href="mailto:eprecisoacreditar@gmail.com">eprecisoacreditar@gmail.com</a>
-    </div>
-  </div>
-  <div class="footer-disclaimer">
-    Este site é de responsabilidade da CT E Preciso Acreditar Ltda (CNPJ 66.082.568/0001-07). As informações disponibilizadas têm caráter informativo e não substituem avaliação médica presencial. Em caso de emergência, acione o SAMU (192) ou os Bombeiros (193). O tratamento de dependência química deve ser conduzido por profissionais habilitados e registrados nos respectivos conselhos de classe.
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 CT É Preciso Acreditar. Todos os direitos reservados.</span>
-    <a href="/privacidade.html">Política de Privacidade</a>
-  </div>
-</footer>
+    <section class="structure" id="estrutura">
+      <div class="container">
+        <p class="section-label">Estrutura</p>
+        <h2 class="section-title">Ambiente preparado para a rotina</h2>
+        <p class="section-sub">Estrutura localizada em área rural de Goiana-PE, com capacidade operacional definida e rotina organizada.</p>
+        <div class="structure-grid">
+          <div class="structure-item"><strong>30</strong><span>leitos</span></div>
+          <div class="structure-item"><strong>24h</strong><span>suporte de rotina</span></div>
+          <div class="structure-item"><strong>PE</strong><span>Goiana</span></div>
+          <div class="structure-item"><strong>Rural</strong><span>ambiente reservado</span></div>
+        </div>
+      </div>
+    </section>
 
-<!-- FLOAT WPP -->
-<a href="https://wa.me/5581973069389?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20tratamento" class="float-wpp" target="_blank" aria-label="Falar pelo WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+    <section class="contact" id="contato">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-label">Contato</p>
+          <h2 class="section-title">Fale com a equipe</h2>
+          <p class="section-sub">Use o WhatsApp correto para receber orientação inicial e informações sobre funcionamento.</p>
+          <div class="contact-list">
+            <div class="contact-item"><div>📍</div><div><strong>Endereço</strong><span>Lot. Catamarã III, Quadra F, Lote 03, KM 50 Rural, Carne de Vaca, Goiana-PE, CEP 55900-000</span></div></div>
+            <div class="contact-item"><div>📱</div><div><strong>WhatsApp institucional</strong><span>(81) 97306-9389</span></div></div>
+            <div class="contact-item"><div>✉️</div><div><strong>Email</strong><span>eprecisoacreditar2026@gmail.com</span></div></div>
+          </div>
+        </div>
+        <div class="cta-box">
+          <h3>Receber orientação agora</h3>
+          <p>Chame no WhatsApp institucional para conversar com a equipe e organizar as primeiras informações.</p>
+          <a class="btn btn-whats" href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20informa%C3%A7%C3%B5es%20sobre%20a%20Comunidade%20Terap%C3%AAutica%20%C3%89%20Preciso%20Acreditar." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+          <a class="btn btn-dark" href="tel:+5581973069389" style="width:100%; margin-top:12px;">Ligar para (81) 97306-9389</a>
+          <p class="small-note">Atendimento inicial com discrição e responsabilidade.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>CT É Preciso Acreditar</h4>
+          <p>Comunidade Terapêutica É Preciso Acreditar Ltda.</p>
+          <p>CNPJ: 66.082.568/0001-07</p>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <p>WhatsApp: (81) 97306-9389</p>
+          <p>Email: eprecisoacreditar2026@gmail.com</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <p><a href="#inicio">Início</a></p>
+          <p><a href="#contato">Contato</a></p>
+          <p><a href="privacidade.html">Política de Privacidade</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 CT É Preciso Acreditar. Todos os direitos reservados.</span>
+        <span>Informações institucionais e orientação inicial para famílias.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="float-wpp" href="https://wa.me/5581973069389?text=Ol%C3%A1%2C%20gostaria%20de%20receber%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">☏</a>
 </body>
 </html>
