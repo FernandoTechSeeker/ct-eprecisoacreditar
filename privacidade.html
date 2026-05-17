@@ -1,507 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade — CT É Preciso Acreditar</title>
+    <meta name="description" content="Política de Privacidade da Comunidade Terapêutica É Preciso Acreditar. Como coletamos, utilizamos e protegemos as informações enviadas pelos usuários.">
 
-  <title>Política de Privacidade | CT É Preciso Acreditar</title>
-
-  <meta name="description" content="Política de Privacidade da CT É Preciso Acreditar. Saiba como coletamos, utilizamos e protegemos informações enviadas por usuários em nossos canais de contato.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --verde: #1b4d3e;
-      --verde-medio: #2d6a55;
-      --verde-claro: #e8f4ef;
-      --ouro: #b8860b;
-      --ouro-claro: #f5ecd4;
-      --branco: #faf9f6;
-      --cinza: #5a5a5a;
-      --cinza-leve: #f2f0eb;
-      --texto: #1a1a1a;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--branco);
-      color: var(--texto);
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      line-height: 1.2;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(250,249,246,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #e0dbd0;
-      z-index: 100;
-      padding: 0 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--verde);
-      text-decoration: none;
-      letter-spacing: 0.01em;
-    }
-
-    .nav-logo span {
-      color: var(--ouro);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      color: var(--cinza);
-      text-decoration: none;
-      font-weight: 400;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--verde);
-    }
-
-    .nav-cta {
-      background: var(--verde);
-      color: white !important;
-      padding: 9px 20px;
-      border-radius: 6px;
-      font-size: 13px !important;
-      font-weight: 500 !important;
-    }
-
-    .page-hero {
-      background: linear-gradient(160deg, var(--verde) 0%, #0f3328 100%);
-      padding: 130px 5% 70px;
-      color: white;
-    }
-
-    .page-hero-content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .page-label {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #d4a843;
-      margin-bottom: 14px;
-    }
-
-    .page-hero h1 {
-      font-size: clamp(36px, 5vw, 56px);
-      margin-bottom: 18px;
-    }
-
-    .page-hero p {
-      max-width: 680px;
-      color: rgba(255,255,255,0.75);
-      font-size: 17px;
-      font-weight: 300;
-    }
-
-    main {
-      padding: 70px 5%;
-    }
-
-    .content {
-      max-width: 900px;
-      margin: 0 auto;
-      background: white;
-      border: 1px solid #e8e4dc;
-      border-radius: 14px;
-      padding: 48px;
-      box-shadow: 0 8px 30px rgba(27,77,62,0.06);
-    }
-
-    .content h2 {
-      color: var(--verde);
-      font-size: 30px;
-      margin-top: 34px;
-      margin-bottom: 14px;
-    }
-
-    .content h2:first-child {
-      margin-top: 0;
-    }
-
-    .content p {
-      color: var(--cinza);
-      margin-bottom: 16px;
-    }
-
-    .content ul {
-      margin: 12px 0 22px 22px;
-      color: var(--cinza);
-    }
-
-    .content li {
-      margin-bottom: 8px;
-    }
-
-    .info-box {
-      background: var(--verde-claro);
-      border-left: 4px solid var(--verde);
-      padding: 18px 22px;
-      border-radius: 0 8px 8px 0;
-      margin: 26px 0;
-      color: var(--verde);
-      font-size: 15px;
-    }
-
-    .warning-box {
-      background: #fff8e1;
-      border-left: 4px solid var(--ouro);
-      padding: 18px 22px;
-      border-radius: 0 8px 8px 0;
-      margin: 26px 0;
-      color: #5a4a00;
-      font-size: 15px;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 30px;
-      background: var(--verde);
-      color: white;
-      padding: 12px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: background 0.2s;
-    }
-
-    .back-link:hover {
-      background: var(--verde-medio);
-    }
-
-    footer {
-      background: #0f2a22;
-      color: rgba(255,255,255,0.5);
-      padding: 36px 5%;
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 28px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .footer-col h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 12px;
-    }
-
-    .footer-col p,
-    .footer-col a {
-      color: rgba(255,255,255,0.55);
-      display: block;
-      text-decoration: none;
-      margin-bottom: 4px;
-    }
-
-    .footer-col a:hover {
-      color: rgba(255,255,255,0.8);
-    }
-
-    .footer-disclaimer {
-      background: rgba(255,255,255,0.04);
-      border-radius: 6px;
-      padding: 12px 16px;
-      font-size: 11.5px;
-      color: rgba(255,255,255,0.3);
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.3);
-    }
-
-    .footer-bottom a {
-      color: rgba(255,255,255,0.4);
-      text-decoration: underline;
-    }
-
-    .float-wpp {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 58px;
-      height: 58px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-      z-index: 200;
-      text-decoration: none;
-      transition: transform 0.2s;
-    }
-
-    .float-wpp:hover {
-      transform: scale(1.08);
-    }
-
-    .float-wpp svg {
-      width: 30px;
-      height: 30px;
-      fill: white;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 0 4%;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .page-hero {
-        padding: 110px 5% 55px;
-      }
-
-      main {
-        padding: 45px 5%;
-      }
-
-      .content {
-        padding: 30px 22px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-    }
-  </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">É Preciso <span>Acreditar</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html#sobre">Sobre</a></li>
-      <li><a href="index.html#equipe">Equipe</a></li>
-      <li><a href="index.html#como-funciona">Como funciona</a></li>
-      <li><a href="index.html#contato" class="nav-cta">Falar agora</a></li>
-    </ul>
-  </nav>
+    <header class="site-header">
+        <div class="site-header__container">
+            <a href="index.html" class="site-header__brand">
+                <span class="site-header__brand-name">É Preciso Acreditar</span>
+                <span class="site-header__brand-tag">Comunidade Terapêutica</span>
+            </a>
+            <nav class="site-nav" aria-label="Navegação principal">
+                <ul class="site-nav__list">
+                    <li><a href="index.html#sobre" class="site-nav__link">Sobre</a></li>
+                    <li><a href="index.html#abordagem" class="site-nav__link">Abordagem</a></li>
+                    <li><a href="index.html#tratamento" class="site-nav__link">Tratamento</a></li>
+                    <li><a href="index.html#equipe" class="site-nav__link">Equipe</a></li>
+                    <li><a href="index.html#faq" class="site-nav__link">Dúvidas</a></li>
+                    <li><a href="index.html#contato" class="site-nav__link site-nav__link--cta">Falar conosco</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <header class="page-hero">
-    <div class="page-hero-content">
-      <p class="page-label">Privacidade e proteção de dados</p>
-      <h1>Política de Privacidade</h1>
-      <p>
-        Esta Política de Privacidade explica como a CT É Preciso Acreditar trata informações enviadas por usuários em seus canais de contato, incluindo site, telefone, WhatsApp e e-mail.
-      </p>
-    </div>
-  </header>
+    <main>
 
-  <main>
-    <div class="content">
+        <section class="policy-hero">
+            <div class="policy-hero__container">
+                <p class="policy-hero__eyebrow">Privacidade e proteção de dados</p>
+                <h1 class="policy-hero__title">Política de Privacidade</h1>
+                <p class="policy-hero__intro">Esta Política de Privacidade explica como a CT É Preciso Acreditar trata as informações enviadas pelos usuários em seus canais de contato — site, telefone, WhatsApp e e-mail.</p>
+            </div>
+        </section>
 
-      <h2>1. Identificação da responsável pelo site</h2>
-      <p>
-        Este site é de responsabilidade da <strong>CT E Preciso Acreditar Ltda</strong>, pessoa jurídica inscrita no CNPJ nº <strong>66.082.568/0001-07</strong>, localizada em Lot. Catamarã III, Quadra F, Lote 03, KM 50 Rural, Carne de Vaca, Goiana — PE, CEP 55.900-000.
-      </p>
+        <section class="policy-main">
+            <div class="policy-main__container">
+                <div class="policy-content">
 
-      <div class="info-box">
-        Esta página tem finalidade informativa e demonstra o compromisso da instituição com a transparência, segurança e respeito às informações fornecidas pelas famílias e usuários.
-      </div>
+                    <h2>1. Identificação da responsável pelo site</h2>
+                    <p>Este site é de responsabilidade da <strong>CT É Preciso Acreditar Ltda</strong>, pessoa jurídica inscrita no CNPJ nº <strong>66.082.568/0001-07</strong>, localizada em Lot. Catamarã III, Quadra F, Lote 03, KM 50 Rural, Carne de Vaca, Goiana — PE, CEP 55.900-000.</p>
 
-      <h2>2. Quais informações podemos coletar</h2>
-      <p>
-        Podemos coletar informações fornecidas voluntariamente pelo usuário ao entrar em contato conosco, tais como:
-      </p>
-      <ul>
-        <li>Nome do usuário ou familiar responsável;</li>
-        <li>Telefone ou WhatsApp;</li>
-        <li>E-mail;</li>
-        <li>Cidade e estado;</li>
-        <li>Informações necessárias para orientação inicial sobre atendimento, acolhimento ou tratamento;</li>
-        <li>Mensagens enviadas por formulários, WhatsApp, telefone ou e-mail.</li>
-      </ul>
+                    <div class="info-box">
+                        Esta página tem finalidade informativa e demonstra o compromisso da instituição com a transparência, segurança e respeito às informações fornecidas pelas famílias e usuários.
+                    </div>
 
-      <h2>3. Como usamos as informações</h2>
-      <p>
-        As informações fornecidas são utilizadas para:
-      </p>
-      <ul>
-        <li>Responder solicitações de contato;</li>
-        <li>Prestar orientação inicial à família ou ao interessado;</li>
-        <li>Organizar atendimento, triagem e informações sobre o processo de acolhimento;</li>
-        <li>Manter comunicação com responsáveis, quando necessário;</li>
-        <li>Cumprir obrigações legais, administrativas e regulatórias aplicáveis.</li>
-      </ul>
+                    <h2>2. Quais informações podemos coletar</h2>
+                    <p>Podemos coletar informações fornecidas voluntariamente pelo usuário ao entrar em contato conosco, tais como:</p>
+                    <ul>
+                        <li>Nome do usuário ou familiar responsável;</li>
+                        <li>Telefone ou WhatsApp;</li>
+                        <li>E-mail;</li>
+                        <li>Cidade e estado;</li>
+                        <li>Informações necessárias para orientação inicial sobre atendimento, acolhimento ou tratamento;</li>
+                        <li>Mensagens enviadas por formulários, WhatsApp, telefone ou e-mail.</li>
+                    </ul>
 
-      <h2>4. Dados sensíveis e informações de saúde</h2>
-      <p>
-        Por se tratar de uma atividade relacionada ao cuidado de pessoas, algumas informações compartilhadas voluntariamente podem envolver dados sensíveis, como informações sobre saúde, dependência química, histórico de tratamento ou situação familiar.
-      </p>
-      <p>
-        Esses dados são tratados com maior cuidado, discrição e finalidade limitada ao atendimento, orientação e organização do processo assistencial.
-      </p>
+                    <h2>3. Como usamos as informações</h2>
+                    <p>As informações fornecidas são utilizadas para:</p>
+                    <ul>
+                        <li>Responder solicitações de contato;</li>
+                        <li>Prestar orientação inicial à família ou ao interessado;</li>
+                        <li>Organizar atendimento, triagem e informações sobre o processo de acolhimento;</li>
+                        <li>Manter comunicação com responsáveis, quando necessário;</li>
+                        <li>Cumprir obrigações legais, administrativas e regulatórias aplicáveis.</li>
+                    </ul>
 
-      <div class="warning-box">
-        Não envie informações falsas, incompletas ou de terceiros sem autorização. Em caso de emergência médica, entre em contato imediatamente com o SAMU 192 ou Bombeiros 193.
-      </div>
+                    <h2>4. Dados sensíveis e informações de saúde</h2>
+                    <p>Por se tratar de uma atividade relacionada ao cuidado de pessoas, algumas informações compartilhadas voluntariamente podem envolver dados sensíveis, como informações sobre saúde, dependência química, histórico de tratamento ou situação familiar.</p>
+                    <p>Esses dados são tratados com maior cuidado, discrição e finalidade limitada ao atendimento, orientação e organização do processo assistencial.</p>
 
-      <h2>5. Compartilhamento de informações</h2>
-      <p>
-        As informações fornecidas não são vendidas ou comercializadas. Elas podem ser compartilhadas apenas quando necessário para:
-      </p>
-      <ul>
-        <li>Atendimento por profissionais envolvidos no cuidado;</li>
-        <li>Cumprimento de obrigações legais;</li>
-        <li>Resposta a autoridades competentes, quando houver solicitação legal;</li>
-        <li>Organização administrativa interna relacionada ao atendimento.</li>
-      </ul>
+                    <div class="warning-box">
+                        Não envie informações falsas, incompletas ou de terceiros sem autorização. Em caso de emergência médica, entre em contato imediatamente com o SAMU 192 ou Bombeiros 193.
+                    </div>
 
-      <h2>6. Uso de WhatsApp, telefone e e-mail</h2>
-      <p>
-        Ao clicar nos botões de WhatsApp, telefone ou e-mail disponíveis neste site, o usuário será direcionado para canais externos de comunicação. O uso desses canais também pode estar sujeito às políticas de privacidade das respectivas plataformas.
-      </p>
+                    <h2>5. Compartilhamento de informações</h2>
+                    <p>As informações fornecidas <strong>não são vendidas ou comercializadas</strong>. Elas podem ser compartilhadas apenas quando necessário para:</p>
+                    <ul>
+                        <li>Atendimento por profissionais envolvidos no cuidado;</li>
+                        <li>Cumprimento de obrigações legais;</li>
+                        <li>Resposta a autoridades competentes, quando houver solicitação legal;</li>
+                        <li>Organização administrativa interna relacionada ao atendimento.</li>
+                    </ul>
 
-      <h2>7. Cookies e dados de navegação</h2>
-      <p>
-        Este site pode utilizar recursos básicos de navegação, funcionamento e segurança. Caso sejam adicionadas ferramentas como Google Analytics, Google Ads, Meta Pixel ou outros recursos de medição, esta Política poderá ser atualizada para informar com mais detalhes sobre esses usos.
-      </p>
+                    <h2>6. Uso de WhatsApp, telefone e e-mail</h2>
+                    <p>Ao clicar nos botões de WhatsApp, telefone ou e-mail disponíveis neste site, o usuário será direcionado para canais externos de comunicação. O uso desses canais também pode estar sujeito às políticas de privacidade das respectivas plataformas.</p>
 
-      <h2>8. Segurança das informações</h2>
-      <p>
-        Adotamos medidas razoáveis para proteger as informações recebidas contra acesso não autorizado, uso indevido, perda, alteração ou divulgação indevida.
-      </p>
-      <p>
-        Apesar dos cuidados adotados, nenhum sistema digital é totalmente livre de riscos. Por isso, recomendamos que o usuário evite enviar informações excessivas ou desnecessárias por canais digitais.
-      </p>
+                    <h2>7. Cookies e dados de navegação</h2>
+                    <p>Este site pode utilizar recursos básicos de navegação, funcionamento e segurança. Caso sejam adicionadas ferramentas como Google Analytics, Google Ads, Meta Pixel ou outros recursos de medição, esta Política poderá ser atualizada para informar com mais detalhes sobre esses usos.</p>
 
-      <h2>9. Direitos do titular dos dados</h2>
-      <p>
-        O usuário poderá solicitar, conforme a legislação aplicável:
-      </p>
-      <ul>
-        <li>Confirmação sobre a existência de tratamento de dados;</li>
-        <li>Acesso às informações fornecidas;</li>
-        <li>Correção de dados incompletos ou desatualizados;</li>
-        <li>Solicitação de exclusão de dados, quando aplicável;</li>
-        <li>Informações sobre o uso e compartilhamento de seus dados.</li>
-      </ul>
+                    <h2>8. Segurança das informações</h2>
+                    <p>Adotamos medidas razoáveis para proteger as informações recebidas contra acesso não autorizado, uso indevido, perda, alteração ou divulgação indevida.</p>
+                    <p>Apesar dos cuidados adotados, nenhum sistema digital é totalmente livre de riscos. Por isso, recomendamos que o usuário evite enviar informações excessivas ou desnecessárias por canais digitais.</p>
 
-      <h2>10. Contato para assuntos de privacidade</h2>
-      <p>
-        Para dúvidas, solicitações ou informações relacionadas a esta Política de Privacidade, entre em contato pelos canais abaixo:
-      </p>
-      <ul>
-        <li><strong>E-mail:</strong> lcfs2015@gmail.com</li>
-        <li><strong>Telefone/WhatsApp:</strong> (81) 8935-9493</li>
-        <li><strong>Endereço:</strong> Lot. Catamarã III, Quadra F, Lote 03, KM 50 Rural, Carne de Vaca, Goiana — PE, CEP 55.900-000</li>
-      </ul>
+                    <h2>9. Direitos do titular dos dados</h2>
+                    <p>O usuário poderá solicitar, conforme a legislação aplicável:</p>
+                    <ul>
+                        <li>Confirmação sobre a existência de tratamento de dados;</li>
+                        <li>Acesso às informações fornecidas;</li>
+                        <li>Correção de dados incompletos ou desatualizados;</li>
+                        <li>Solicitação de exclusão de dados, quando aplicável;</li>
+                        <li>Informações sobre o uso e compartilhamento de seus dados.</li>
+                    </ul>
 
-      <h2>11. Atualizações desta política</h2>
-      <p>
-        Esta Política de Privacidade poderá ser atualizada a qualquer momento para refletir mudanças legais, operacionais ou tecnológicas. Recomendamos que o usuário consulte esta página periodicamente.
-      </p>
+                    <h2>10. Contato para assuntos de privacidade</h2>
+                    <p>Para dúvidas, solicitações ou informações relacionadas a esta Política de Privacidade, entre em contato pelos canais oficiais:</p>
+                    <ul>
+                        <li><strong>E-mail:</strong> eprecisoacreditar2026@gmail.com</li>
+                        <li><strong>Telefone/WhatsApp:</strong> (81) 97306-9389</li>
+                        <li><strong>Endereço:</strong> Lot. Catamarã III, Quadra F, Lote 03, KM 50 Rural, Carne de Vaca, Goiana — PE, CEP 55.900-000</li>
+                    </ul>
 
-      <p><strong>Última atualização:</strong> maio de 2026.</p>
+                    <h2>11. Atualizações desta política</h2>
+                    <p>Esta Política de Privacidade poderá ser atualizada a qualquer momento para refletir mudanças legais, operacionais ou tecnológicas. Recomendamos que o usuário consulte esta página periodicamente.</p>
 
-      <a href="index.html" class="back-link">← Voltar para a página inicial</a>
+                    <p><strong>Última atualização:</strong> maio de 2026.</p>
 
-    </div>
-  </main>
+                    <a href="index.html" class="policy-back">← Voltar para a página inicial</a>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>CT É Preciso Acreditar</h4>
-        <p>Comunidade Terapêutica especializada no tratamento de dependência química em Goiana, Pernambuco.</p>
-      </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="footer-col">
-        <h4>Informações legais</h4>
-        <p><strong style="color:rgba(255,255,255,0.45)">Razão Social:</strong> CT E Preciso Acreditar Ltda</p>
-        <p><strong style="color:rgba(255,255,255,0.45)">CNPJ:</strong> 66.082.568/0001-07</p>
-        <p><strong style="color:rgba(255,255,255,0.45)">CNAE:</strong> 87.20-4-99</p>
-        <p><strong style="color:rgba(255,255,255,0.45)">Sit. Cadastral:</strong> Ativa</p>
-      </div>
+    </main>
 
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <p>Lot. Catamarã III, Qd F, Lt 03<br>KM 50 Rural, Carne de Vaca<br>Goiana — PE | CEP 55.900-000</p>
-        <a href="tel:+558189359493">(81) 8935-9493</a>
-        <a href="mailto:lcfs2015@gmail.com">lcfs2015@gmail.com</a>
-      </div>
-    </div>
+    <footer class="site-footer">
+        <div class="site-footer__container">
+            <div class="site-footer__brand">
+                <p class="site-footer__brand-name">Comunidade Terapêutica É Preciso Acreditar</p>
+                <p class="site-footer__brand-info">CNPJ: 66.082.568/0001-07</p>
+                <p class="site-footer__brand-info">Carne de Vaca, Goiana — PE</p>
+            </div>
+            <nav class="site-footer__nav" aria-label="Navegação do rodapé">
+                <ul class="site-footer__list">
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#abordagem">Abordagem</a></li>
+                    <li><a href="index.html#tratamento">Tratamento</a></li>
+                    <li><a href="index.html#equipe">Equipe</a></li>
+                    <li><a href="index.html#faq">Dúvidas</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer__copyright">&copy; 2026 Comunidade Terapêutica É Preciso Acreditar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-    <div class="footer-disclaimer">
-      Este site é de responsabilidade da CT E Preciso Acreditar Ltda (CNPJ 66.082.568/0001-07). As informações disponibilizadas têm caráter informativo e não substituem avaliação médica presencial. Em caso de emergência, acione o SAMU (192) ou os Bombeiros (193). O tratamento de dependência química deve ser conduzido por profissionais habilitados e registrados nos respectivos conselhos de classe.
-    </div>
+    <a href="https://wa.me/5581973069389?text=Ol%C3%A1.%20Gostaria%20de%20conversar%20com%20a%20equipe%20sobre%20acolhimento." class="float-wpp" target="_blank" rel="noopener" aria-label="Falar conosco pelo WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16.003 3C9.374 3 4 8.374 4 15.003c0 2.39.703 4.617 1.91 6.487L4 28l6.69-1.823a11.95 11.95 0 0 0 5.313 1.279h.005c6.628 0 12.002-5.374 12.002-12.003C28.01 8.374 22.636 3 16.003 3zm0 21.832c-1.69 0-3.349-.453-4.797-1.31l-.345-.204-3.97 1.082 1.058-3.866-.225-.359a9.926 9.926 0 0 1-1.527-5.272c0-5.482 4.46-9.94 9.943-9.94 2.657 0 5.151 1.034 7.027 2.91a9.876 9.876 0 0 1 2.913 7.034c0 5.482-4.46 9.925-9.942 9.925zm5.451-7.443c-.299-.15-1.766-.872-2.041-.971-.274-.1-.473-.149-.673.15-.198.298-.771.97-.946 1.17-.174.198-.349.224-.648.075-.299-.15-1.262-.466-2.404-1.484-.888-.792-1.487-1.77-1.661-2.069-.174-.298-.018-.46.131-.609.135-.135.299-.349.448-.524.149-.174.198-.299.299-.498.099-.198.05-.373-.025-.523-.075-.149-.673-1.621-.921-2.222-.243-.583-.49-.503-.673-.512l-.573-.01a1.1 1.1 0 0 0-.797.374c-.274.298-1.046 1.021-1.046 2.493 0 1.471 1.071 2.893 1.22 3.092.149.198 2.107 3.215 5.105 4.508.714.308 1.27.492 1.704.63.716.227 1.368.195 1.883.119.575-.086 1.766-.722 2.014-1.418.249-.697.249-1.295.174-1.418-.074-.123-.273-.198-.572-.347z"/>
+        </svg>
+    </a>
 
-    <div class="footer-bottom">
-      <span>© 2026 CT É Preciso Acreditar. Todos os direitos reservados.</span>
-      <a href="privacidade.html">Política de Privacidade</a>
-    </div>
-  </footer>
-
-  <a href="https://wa.me/5581893599493?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20tratamento" class="float-wpp" target="_blank" aria-label="Falar pelo WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
