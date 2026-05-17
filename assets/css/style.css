@@ -718,74 +718,68 @@ section {
 
     .site-header__container {
         min-height: auto;
-        padding: 18px 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 18px;
+        padding: 14px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
     }
 
     .site-header__brand {
-        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        flex: 1;
     }
 
     .site-header__brand-name {
-        font-size: 1.15rem;
-        line-height: 1.2;
+        font-size: 1.05rem;
+        line-height: 1.15;
     }
 
     .site-header__brand-tag {
-        font-size: 0.9rem;
+        font-size: 0.82rem;
+        line-height: 1.15;
     }
 
     .site-nav {
-        width: 100%;
+        width: auto;
     }
 
     .site-nav__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0;
         list-style: none;
     }
 
-    .site-nav__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 42px;
-        padding: 9px 12px;
-        border: 1px solid var(--borda-suave);
-        border-radius: 999px;
-        background: var(--branco);
-        color: var(--texto-escuro);
-        font-size: 0.88rem;
-        font-weight: 700;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    .site-nav__link:hover {
-        color: var(--azul-vivo);
+    .site-nav__list li:not(:last-child) {
+        display: none;
     }
 
     .site-nav__link--cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 9px 16px;
+        border-radius: 999px;
         background: var(--verde-principal);
         color: var(--branco);
-        border-color: var(--verde-principal);
-    }
-
-    .site-nav__link--cta:hover {
-        background: var(--verde-vivo);
-        color: var(--branco);
+        font-size: 0.86rem;
+        font-weight: 800;
+        white-space: nowrap;
+        text-decoration: none;
     }
 
     .hero {
-        padding: 68px 0 58px;
+        padding: 58px 0 50px;
     }
 
     .hero__title {
-        font-size: 2.15rem;
+        font-size: 1.9rem;
+        line-height: 1.15;
     }
 
     .hero__subtitle {
@@ -802,11 +796,12 @@ section {
 
     .hero__quick-info {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         gap: 10px;
     }
 
     .hero__quick-info li {
+        width: 100%;
         min-width: 0;
         padding: 12px 10px;
     }
@@ -825,54 +820,34 @@ section {
 
 @media (max-width: 520px) {
     .site-header__container {
-        width: min(100% - 32px, 1120px);
-        padding: 16px 0;
-        gap: 16px;
+        width: min(100% - 28px, 1120px);
+        padding: 12px 0;
     }
 
     .site-header__brand-name {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .site-header__brand-tag {
-        font-size: 0.88rem;
-    }
-
-    .site-nav__list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .site-nav__link {
-        min-height: 40px;
-        padding: 8px 10px;
-        font-size: 0.86rem;
+        font-size: 0.78rem;
     }
 
     .site-nav__link--cta {
-        grid-column: 1 / -1;
-        min-height: 46px;
-        font-size: 0.95rem;
+        min-height: 38px;
+        padding: 8px 14px;
+        font-size: 0.82rem;
     }
 
     .hero {
-        padding: 58px 0 50px;
+        padding: 50px 0 46px;
     }
 
     .hero__title {
-        font-size: 1.95rem;
+        font-size: 1.75rem;
     }
 
     .hero__subtitle {
-        font-size: 0.98rem;
-    }
-
-    .hero__quick-info {
-        grid-template-columns: 1fr;
-    }
-
-    .hero__quick-info li {
-        width: 100%;
+        font-size: 0.96rem;
     }
 
     .image-card {
